@@ -1,8 +1,7 @@
 #write a function to determine whether a word is a palindrome or not
 
 def is_palindrome(word):
-    '''determine whether word is spelled same way forward as backwards
-    returns boolean'''
+
     word_len = len(word)
     
     last_index = -1 
@@ -16,15 +15,14 @@ def is_palindrome(word):
 
     return True
 
-print(is_palindrome('hannah'))
-print(is_palindrome('haxnah'))
-print(is_palindrome('a'))
-print(is_palindrome('aa'))
-print(is_palindrome('aba'))
-print(is_palindrome('abax'))
+#alternate method - fewer steps
+def is_palindrome2(word):
+    left = 0
+    right = len(word) - 1
+    while left < right:
+        if word[left] != word[right]:
+            return False
+        left += 1
+        right -= 1
+    return True
 
-
-        
-   
-
-# is_palindrome('abcdef')
